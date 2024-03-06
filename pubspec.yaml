@@ -64,10 +64,7 @@ flutter:
     - assets/images/
     - assets/audio/
 
-flutter_assets:
-  assets_path: assets/
-  output_path: lib/utils/constants/
-  filename: assets.dart  
+
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
