@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:flame/components.dart';
 import 'package:flappy_bird_game/game/flappy_bird_game.dart';
+import 'package:flappy_bird_game/utils/config/configuration.dart';
 import 'package:flappy_bird_game/utils/constants/assets.dart';
 import 'package:flappy_bird_game/utils/constants/enums.dart';
 
@@ -23,5 +24,11 @@ class Bird extends SpriteGroupComponent<BirdMovement>
       BirdMovement.up: birdUpFlap,
       BirdMovement.down: birdDownFlap
     };
+  }
+
+  @override
+  void update(double dt) {
+    super.update(dt);
+    position.y += Config.birdVelocity * dt;
   }
 }
